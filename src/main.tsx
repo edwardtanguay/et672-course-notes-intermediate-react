@@ -1,10 +1,10 @@
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import "./index.scss";
-import { PageWelcome } from "./pages/PageWelcome.tsx";
 import { PageInfo } from "./pages/PageInfo.tsx";
 import { PageAbout } from "./pages/PageAbout.tsx";
+import { PageExamples } from "./pages/PageExamples.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -12,8 +12,8 @@ const router = createBrowserRouter([
 		element: <App />,
 		children: [
 			{
-				path: '/',
-				element: <PageWelcome />,
+				path: '/examples',
+				element: <PageExamples />,
 			},
 			{
 				path: 'info',
@@ -23,6 +23,10 @@ const router = createBrowserRouter([
 				path: 'about',
 				element: <PageAbout />,
 			},
+			{
+				path: "/",
+				element: <Navigate to="/examples" replace/>
+			}
 		],
 	},
 ]);

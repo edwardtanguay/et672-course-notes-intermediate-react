@@ -3,11 +3,15 @@
 @tailwind utilities;
 
 @layer base {
-	h1 {
+	h1, h2 {
 		font-variant: small-caps;
+	}
+
+	section {
+		@apply border border-slate-600 p-4 rounded-lg mt-2 mb-4
 	}
 }
 
 a.active {
-	color: rgb(232, 232, 141);
+	color: rgb(232, 218, 141);
 }
