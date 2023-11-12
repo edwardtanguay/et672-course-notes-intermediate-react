@@ -18,23 +18,23 @@ export const PageMoreExamples = () => {
 				<h2 className="text-3xl mb-3">
 					flex employees with absolute/relative overlay text
 				</h2>
-				<div className="flex gap-3 flex-wrap w-full rounded-lg">
-					{employees.map((employee) => {
-						return (
-							<>
-								<div className="w-full sm:w-40 md:w-40 lg:w-80 relative">
-									<p className="absolute left-0 p-2 top-0 bg-gray-600 text-gray-300 bg-opacity-80 w-full rounded-t-lg">
-										{employee.firstName} {employee.lastName}
-									</p>
-									<img
-										className="w-full rounded-lg"
-										src={`images/employees/employee_${employee.employeeID}.jpg`}
-									/>
-								</div>
-							</>
-						);
-					})}
+<div className="flex gap-3 flex-wrap w-full rounded-lg">
+	{employees.map((employee) => {
+		return (
+			<>
+				<div className="w-full sm:w-40 md:w-40 lg:w-80 relative">
+					<p className="absolute left-0 p-2 top-0 bg-gray-600 text-gray-300 bg-opacity-70 w-full rounded-t-lg">
+						{employee.firstName} {employee.lastName}
+					</p>
+					<img
+						className="w-full rounded-lg"
+						src={`images/employees/employee_${employee.employeeID}.jpg`}
+					/>
 				</div>
+			</>
+		);
+	})}
+</div>
 			</section>
 		</>
 	);
