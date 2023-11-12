@@ -2,7 +2,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import "./index.scss";
-import { PageInfo } from "./pages/PageInfo.tsx";
+import { PageMoreExamples } from "./pages/PageMoreExamples.tsx";
 import { PageAbout } from "./pages/PageAbout.tsx";
 import { PageExamples } from "./pages/PageExamples.tsx";
 
@@ -16,8 +16,8 @@ const router = createBrowserRouter([
 				element: <PageExamples />,
 			},
 			{
-				path: 'info',
-				element: <PageInfo />,
+				path: 'more-examples',
+				element: <PageMoreExamples />,
 			},
 			{
 				path: 'about',
